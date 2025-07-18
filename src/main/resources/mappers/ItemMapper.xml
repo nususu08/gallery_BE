@@ -3,6 +3,14 @@
 <!-- namespace="xml파일과 세트인 mapper interface의 풀 네임이 들어가야 한다. -->
 <mapper namespace="kr.co.wikibook.gallery.item.ItemMapper">
 
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO items
+        SET name = #{name}
+        , img_path = #{imgPath}
+        , price = #{price}
+        , discount_per = #{discountPer}
+    </insert>
+
     <select id="findAllByIdIn">
         SELECT id, name, img_path, price, discount_per
         FROM items

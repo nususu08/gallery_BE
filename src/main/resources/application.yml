@@ -9,6 +9,9 @@ spring:
     url: jdbc:mariadb://localhost/gallery
     username: root
     password: green502
+  servlet:
+    multipart:
+      max-file-size: 15MB
 
 mybatis:
   configuration:
